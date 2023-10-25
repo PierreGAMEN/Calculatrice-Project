@@ -6,52 +6,71 @@
     <title>Calculatrice</title>
     <script src="calculator.js"></script>
     <link rel="stylesheet" type="text/css" href="stylecalculator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>Calculatrice</h1>
 
     <div id="content-calculatrice">
         <div id="calculatrice">
         <div id="ecran">
-            <p id="valeur"></p>
+            <p id="valeur">0</p>
         </div>
-        <div id="content-chiffre">
-            <ul>
-                <button id="un" onclick="ajouterChiffre(1)">1</button>
-                <button id="deux" onclick="ajouterChiffre(2)">2</button>
-                <button id="trois" onclick="ajouterChiffre(3)">3</button>
-                <button id="quatre" onclick="ajouterChiffre(4)">4</button>
-                <button id="cinq" onclick="ajouterChiffre(5)">5</button>
-                <button id="six" onclick="ajouterChiffre(6)">6</button>
-                <button id="sept" onclick="ajouterChiffre(7)">7</button>
-                <button id="huit" onclick="ajouterChiffre(8)">8</button>
-                <button id="neuf" onclick="ajouterChiffre(9)">9</button>
-                <button id="zero" onclick="ajouterChiffre(0)">0</button>
+
+        <div class="BoutonCalculette">
+        <div class="Ligne1">
             
-
-            </ul>
-        </div>
-
-        <div id="content-num">
-            <ul>
-                <button id="plus" onclick="">+</button>
-                <button id="moins" onclick="">-</button>
-                <button id="fois" onclick="">x</button>
-                <button id="divise" onclick="">/</button>
-                <button id="egal" onclick="">=</button>
-            </ul>
-        </div>
-
-        <div id="content-other">
-            <ul>
-                <button id="ClearAll" onclick="clearAll()">ClearAll</button>
-                <button id="Clear" onclick="clear()">Clear</button>
+                <button onclick="AddValue()">&#40</button>
+                <button onclick="AddValue()">&#41</button>
+                <button onclick="AddValue()">%</button>
+                <button onclick="ClearValue()">AC</button>
                 
-            </ul>
+
+            
         </div>
 
+        <div class="Ligne">
+            
+                <button onclick="AddValue(7)">7</button>
+                <button onclick="AddValue(8)">8</button>
+                <button onclick="AddValue(9)">9</button>
+                <button class="divise" onclick="AddValue()">/</button>
+            
+        </div>
 
+        <div class="Ligne">
+            
+                <button onclick="AddValue(4)">4</button>
+                <button onclick="AddValue(5)">5</button>
+                <button onclick="AddValue(6)">6</button>
+                <button class="fois" onclick="AddValue()">&times</button>
+                
+            
+        </div>
+
+        <div class="Ligne">
+            
+                <button onclick="AddValue(1)">1</button>
+                <button onclick="AddValue(2)">2</button>
+                <button onclick="AddValue(3)">3</button>
+                <button class="moins" onclick="AddValue()">-</button>
+                
+            
+        </div>
+
+        <div class="Ligne">
+            
+                <button onclick="AddValue(0)">0</button>
+                <button onclick="AddValue()">.</button>
+                <button onclick="AddValue()">=</button>
+                <button class="plus" onclick="AddValue()">+</button>
+                
+            
+        </div>
+
+    </div>
 
 
 
