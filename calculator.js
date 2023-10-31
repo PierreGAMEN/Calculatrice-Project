@@ -31,12 +31,11 @@ function AddValue(clickedButton) {
     }
 
     calculatorText += clickedButton;
-    let value = document.getElementById("valeur");
-    value.innerHTML = calcul[calculIndex];
-    console.log(calcul[calculIndex]);
+    document.getElementById("valeur").innerHTML = calculatorText;
+    console.log(calcul, calculatorText);
 }
 
-function resultat() {
+function compute() {
     let result = 0;
     let operator = "+";
 
@@ -46,27 +45,27 @@ function resultat() {
         } else {
             switch (operator) {
                 case "+":
-                    result += parseInt(calcul[i]);
+                    result += parseFloat(calcul[i]);
                     break;
                 case "-":
-                    result -= parseInt(calcul[i]);
+                    result -= parseFloat(calcul[i]);
                     break;
                 case "*":
-                    result *= parseInt(calcul[i]);
+                    result *= parseFloat(calcul[i]);
                     break;
                 case "/":
-                    result /= parseInt(calcul[i]);
+                    result /= parseFloat(calcul[i]);
                     break;
-
-                   
             }
         }
         calculatorText = result;
-        return result;
     } 
+
+    calcul = [];
+    calculIndex = 0;
+    calculatorText = "";
+
+    document.getElementById("valeur").innerHTML = result;
+    return result;
 }
-
-console.log(calcul);
-console.log(calculatorText);
-
 
